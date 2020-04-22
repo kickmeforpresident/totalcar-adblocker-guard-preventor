@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Totalcar Adblock Guard Preventor",
+    "version": "1.0",
+    "description": "Totalcar Adblock Guard Preventor",
+    "icons": {
+        "16": "src/assets/icons/icon16.png",
+        "48": "src/assets/icons/icon48.png",
+        "128": "src/assets/icons/icon128.png"
+    },
+    "browser_action": {
+        "default_title": "Totalcar Adblock Guard Preventor"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "src/js/content.js"
+            ],
+            "matches": [
+                "https://totalcar.hu/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "https://totalcar.hu/*"
+    ],
+    "web_accessible_resources": [
+        "src/js/*"
+    ]
+}
